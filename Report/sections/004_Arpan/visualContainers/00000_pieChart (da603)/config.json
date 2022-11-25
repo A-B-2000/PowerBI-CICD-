@@ -1,0 +1,86 @@
+{
+  "name": "da603dc0317e0b090195",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 545.23605150214587,
+        "y": 37.081545064377679,
+        "z": 0,
+        "width": 560.34334763948493,
+        "height": 429.87124463519314
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "pieChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Fact.Sum of Revenue"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "Customer.City",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        },
+        {
+          "Name": "c",
+          "Entity": "Customer",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Sum of Revenue"
+          },
+          "Name": "Fact.Sum of Revenue"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "c"
+              }
+            },
+            "Property": "City"
+          },
+          "Name": "Customer.City"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "f"
+                }
+              },
+              "Property": "Sum of Revenue"
+            }
+          }
+        }
+      ]
+    },
+    "hasDefaultSort": true
+  }
+}

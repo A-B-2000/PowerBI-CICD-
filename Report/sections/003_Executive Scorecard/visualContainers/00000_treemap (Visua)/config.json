@@ -1,0 +1,85 @@
+{
+  "name": "VisualContainer5",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 6,
+        "y": 419,
+        "z": 2000,
+        "width": 284,
+        "height": 173
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "treemap",
+    "projections": {
+      "Group": [
+        {
+          "queryRef": "State.Region",
+          "active": true
+        }
+      ],
+      "Values": [
+        {
+          "queryRef": "Fact.Total Revenue"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        },
+        {
+          "Name": "s",
+          "Entity": "State",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "s"
+              }
+            },
+            "Property": "Region"
+          },
+          "Name": "State.Region"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Total Revenue"
+          },
+          "Name": "Fact.Total Revenue"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "f"
+                }
+              },
+              "Property": "Total Revenue"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

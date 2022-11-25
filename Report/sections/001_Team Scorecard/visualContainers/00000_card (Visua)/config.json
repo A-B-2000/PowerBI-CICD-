@@ -1,0 +1,63 @@
+{
+  "name": "VisualContainer5",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 730.89128305582767,
+        "y": 0,
+        "z": 5000,
+        "width": 169.24583741429973,
+        "height": 81.488736532810975
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Fact.# of Customers"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "# of Customers"
+          },
+          "Name": "Fact.# of Customers"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "f"
+                }
+              },
+              "Property": "# of Customers"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

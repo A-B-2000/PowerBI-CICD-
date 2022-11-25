@@ -1,0 +1,42 @@
+{
+  "name": "VisualContainer",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 9.4117647058823533,
+        "y": 0,
+        "z": 0,
+        "width": 510.11764705882354,
+        "height": 62.38636363636364
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Industry Margin Analysis",
+                    "textStyle": {
+                      "fontFamily": "Heading",
+                      "fontSize": "28pt",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

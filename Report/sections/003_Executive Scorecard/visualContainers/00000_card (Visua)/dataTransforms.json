@@ -1,0 +1,58 @@
+{
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "RevenueTY Status",
+        "Name": "Fact._RevenueTY Status",
+        "Type": 3,
+        "kpi": {
+          "graphic": "Traffic Light - Single",
+          "normalizedFiveStateKpiRange": false
+        }
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "RevenueTY Status",
+      "kpi": {
+        "graphic": "Traffic Light - Single",
+        "normalizedFiveStateKpiRange": false
+      },
+      "queryName": "Fact._RevenueTY Status",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 260
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact"
+            }
+          },
+          "Property": "_RevenueTY Status"
+        }
+      }
+    }
+  ]
+}

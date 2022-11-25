@@ -1,0 +1,63 @@
+{
+  "name": "VisualContainer2",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 3,
+        "y": 128,
+        "z": 3000,
+        "width": 144,
+        "height": 73
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Fact._RevenueTY Status"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "_RevenueTY Status"
+          },
+          "Name": "Fact._RevenueTY Status"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "f"
+                }
+              },
+              "Property": "_RevenueTY Status"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

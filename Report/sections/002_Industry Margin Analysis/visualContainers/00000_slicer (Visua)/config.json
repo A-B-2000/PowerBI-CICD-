@@ -1,0 +1,50 @@
+{
+  "name": "VisualContainer3",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 0,
+        "y": 82.742409402546528,
+        "z": 3000,
+        "width": 165.48481880509306,
+        "height": 384.87757100881493
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "slicer",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Industry.Industry",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "i",
+          "Entity": "Industry",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "i"
+              }
+            },
+            "Property": "Industry"
+          },
+          "Name": "Industry.Industry"
+        }
+      ]
+    },
+    "objects": {}
+  }
+}

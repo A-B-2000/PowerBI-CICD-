@@ -1,0 +1,101 @@
+{
+  "name": "VisualContainer10",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 152.94809010773753,
+        "y": 107.8158667972576,
+        "z": 10000,
+        "width": 524.03525954946133,
+        "height": 280.822722820764
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "BU.BU",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Fact.RevenueTY"
+        }
+      ],
+      "Y2": [
+        {
+          "queryRef": "Fact.GM%"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "b",
+          "Entity": "BU",
+          "Type": 0
+        },
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "b"
+              }
+            },
+            "Property": "BU"
+          },
+          "Name": "BU.BU"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "RevenueTY"
+          },
+          "Name": "Fact.RevenueTY"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "GM%"
+          },
+          "Name": "Fact.GM%"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "f"
+                }
+              },
+              "Property": "RevenueTY"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

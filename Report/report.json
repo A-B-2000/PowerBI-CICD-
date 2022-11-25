@@ -1,0 +1,32 @@
+{
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection1",
+      "config": "{\"acceptsFilterContext\":1}",
+      "cortanaEnabled": true,
+      "name": "Pod"
+    },
+    {
+      "boundSection": "ReportSection3",
+      "config": "{\"acceptsFilterContext\":1}",
+      "name": "Pod1"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "power-bi-obvience-splash22687191981822252.png",
+            "path": "power-bi-obvience-splash22687191981822252.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ]
+}

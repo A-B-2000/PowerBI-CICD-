@@ -1,0 +1,97 @@
+{
+  "projectionOrdering": {
+    "Group": [
+      0
+    ],
+    "Values": [
+      1
+    ]
+  },
+  "projectionActiveItems": {
+    "Group": [
+      {
+        "queryRef": "State.Region",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Region",
+        "Name": "State.Region",
+        "Type": 2048,
+        "DataCategory": 5
+      },
+      {
+        "Restatement": "Total Revenue",
+        "Name": "Fact.Total Revenue",
+        "Type": 1,
+        "Format": "\\$#,0;(\\$#,0);\\$#,0"
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Group",
+          "Projection": 0,
+          "isActive": true
+        },
+        {
+          "Name": "Values",
+          "Projection": 1,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Region",
+      "queryName": "State.Region",
+      "roles": {
+        "Group": true
+      },
+      "type": {
+        "category": "Country",
+        "underlyingType": 6751233
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "State"
+            }
+          },
+          "Property": "Region"
+        }
+      }
+    },
+    {
+      "displayName": "Total Revenue",
+      "format": "\\$#,0;(\\$#,0);\\$#,0",
+      "queryName": "Fact.Total Revenue",
+      "roles": {
+        "Values": true
+      },
+      "sort": 2,
+      "sortOrder": 0,
+      "type": {
+        "category": null,
+        "underlyingType": 259
+      },
+      "expr": {
+        "Measure": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "Fact"
+            }
+          },
+          "Property": "Total Revenue"
+        }
+      }
+    }
+  ]
+}

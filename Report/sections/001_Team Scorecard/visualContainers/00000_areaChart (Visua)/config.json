@@ -1,0 +1,91 @@
+{
+  "name": "VisualContainer3",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 179.2,
+        "y": 97.28,
+        "z": 3000,
+        "width": 495.36,
+        "height": 281.6
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "areaChart",
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "Date.Month",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Fact.Revenue Var % to Budget"
+        }
+      ],
+      "Series": [
+        {
+          "queryRef": "Executive.Name"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "Date",
+          "Type": 0
+        },
+        {
+          "Name": "e",
+          "Entity": "Executive",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Revenue Var % to Budget"
+          },
+          "Name": "Fact.Revenue Var % to Budget"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Month"
+          },
+          "Name": "Date.Month"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "e"
+              }
+            },
+            "Property": "Name"
+          },
+          "Name": "Executive.Name"
+        }
+      ]
+    }
+  }
+}

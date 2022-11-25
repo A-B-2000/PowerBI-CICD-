@@ -1,0 +1,50 @@
+{
+  "name": "VisualContainer2",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 10.352941176470589,
+        "y": 92.045454545454547,
+        "z": 2000,
+        "width": 136.47058823529412,
+        "height": 138.06818181818181
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "slicer",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Executive.Name",
+          "active": true
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "e",
+          "Entity": "Executive",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "e"
+              }
+            },
+            "Property": "Name"
+          },
+          "Name": "Executive.Name"
+        }
+      ]
+    },
+    "objects": {}
+  }
+}

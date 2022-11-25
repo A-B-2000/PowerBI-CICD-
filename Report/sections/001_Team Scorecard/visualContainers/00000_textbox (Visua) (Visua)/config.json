@@ -1,0 +1,42 @@
+{
+  "name": "VisualContainer1",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 1134.5739471106758,
+        "y": 679.49069539666993,
+        "z": 0,
+        "width": 136.65034280117533,
+        "height": 33.84916748285994
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "obviEnce ©",
+                    "textStyle": {
+                      "fontFamily": "Lucida Sans Unicode",
+                      "fontSize": "8pt",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

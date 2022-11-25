@@ -1,0 +1,63 @@
+{
+  "name": "VisualContainer9",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 1063.1145935357492,
+        "y": 0,
+        "z": 8000,
+        "width": 191.81194906953968,
+        "height": 82.742409402546528
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "card",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Fact.GM%"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "GM%"
+          },
+          "Name": "Fact.GM%"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 2,
+          "Expression": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "f"
+                }
+              },
+              "Property": "GM%"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

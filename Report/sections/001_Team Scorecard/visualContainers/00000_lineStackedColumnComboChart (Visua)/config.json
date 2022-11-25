@@ -1,0 +1,86 @@
+{
+  "name": "VisualContainer9",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 10.24,
+        "y": 418.56,
+        "z": 9000,
+        "width": 661.76,
+        "height": 271.36
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "lineStackedColumnComboChart",
+    "projections": {
+      "Y": [
+        {
+          "queryRef": "Fact.RevenueTY"
+        }
+      ],
+      "Category": [
+        {
+          "queryRef": "Date.Month",
+          "active": true
+        }
+      ],
+      "Y2": [
+        {
+          "queryRef": "Fact.Revenue Var % to Budget"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        },
+        {
+          "Name": "d",
+          "Entity": "Date",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "RevenueTY"
+          },
+          "Name": "Fact.RevenueTY"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "d"
+              }
+            },
+            "Property": "Month"
+          },
+          "Name": "Date.Month"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Revenue Var % to Budget"
+          },
+          "Name": "Fact.Revenue Var % to Budget"
+        }
+      ]
+    }
+  }
+}

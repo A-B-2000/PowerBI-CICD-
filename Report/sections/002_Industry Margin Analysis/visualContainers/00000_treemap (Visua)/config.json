@@ -1,0 +1,70 @@
+{
+  "name": "VisualContainer5",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 149.76,
+        "y": 418.56,
+        "z": 5000,
+        "width": 527.36,
+        "height": 281.6
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "treemap",
+    "projections": {
+      "Group": [
+        {
+          "queryRef": "Product.Product",
+          "active": true
+        }
+      ],
+      "Values": [
+        {
+          "queryRef": "Fact.Total Revenue"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "p",
+          "Entity": "Product",
+          "Type": 0
+        },
+        {
+          "Name": "f",
+          "Entity": "Fact",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Product"
+          },
+          "Name": "Product.Product"
+        },
+        {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "f"
+              }
+            },
+            "Property": "Total Revenue"
+          },
+          "Name": "Fact.Total Revenue"
+        }
+      ]
+    }
+  }
+}
